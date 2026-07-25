@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
 </head>
 <body>
 
@@ -104,9 +105,9 @@
   });
 
 
-  fetch('data/berita.json').then(r=>r.json()).then(d=>{
+  fetch(APPS_SCRIPT_URL + '?action=berita').then(r=>r.json()).then(res=>{
     const el = document.getElementById('beritaList');
-    const items = (d.items||[]);
+    const items = (res.berita||[]);
     if(items.length === 0){
       el.innerHTML = '<p class="tbd text-sm">Belum ada berita. Tambahkan lewat halaman /admin.</p>';
       return;

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
 </head>
 <body>
 
@@ -112,7 +113,8 @@
   });
 
 
-  fetch('data/pengaturan.json').then(r=>r.json()).then(d=>{
+  fetch(APPS_SCRIPT_URL + '?action=pengaturan').then(r=>r.json()).then(res=>{
+    const d = res.pengaturan || {};
     const t = (val,fallback) => val && val.trim() ? val : fallback;
     document.getElementById('kAlamat').textContent = t(d.alamat_kantor, 'Alamat belum diisi');
     document.getElementById('kTelepon').textContent = t(d.telepon, 'belum diisi');

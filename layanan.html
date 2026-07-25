@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
 </head>
 <body>
 
@@ -130,8 +131,9 @@
 
 
   let NOMOR_WA_KANTOR_DESA = "";
-  fetch('data/pengaturan.json').then(r=>r.json()).then(d=>{
-    document.getElementById('alamatKantor').textContent = d.alamat_kantor && d.alamat_kantor.trim() ? d.alamat_kantor : 'Alamat belum diisi (isi lewat /admin)';
+  fetch(APPS_SCRIPT_URL + '?action=pengaturan').then(r=>r.json()).then(res=>{
+    const d = res.pengaturan || {};
+    document.getElementById('alamatKantor').textContent = d.alamat_kantor && d.alamat_kantor.trim() ? d.alamat_kantor : 'Alamat belum diisi';
     NOMOR_WA_KANTOR_DESA = d.nomor_wa_pengaduan || "";
   }).catch(()=>{});
 

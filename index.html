@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
 </head>
 <body>
 
@@ -130,28 +131,29 @@
   });
 
 
-  fetch('data/pengaturan.json').then(r=>r.json()).then(d=>{
+  fetch(APPS_SCRIPT_URL + '?action=all').then(r=>r.json()).then(d=>{
     const set=(id,val,suffix)=>{ document.getElementById(id).textContent = val ? (val+(suffix||'')) : '— (belum diisi)'; };
-    set('statPenduduk', d.jumlah_penduduk, ' jiwa');
-    set('statLuas', d.luas_wilayah, ' km²');
-    set('statDusun', d.jumlah_dusun);
-    set('statKK', d.jumlah_kk);
-  }).catch(()=>{});
+    const p = d.pengaturan || {};
+    set('statPenduduk', p.jumlah_penduduk, ' jiwa');
+    set('statLuas', p.luas_wilayah, ' km²');
+    set('statDusun', p.jumlah_dusun);
+    set('statKK', p.jumlah_kk);
 
-  fetch('data/pengumuman.json').then(r=>r.json()).then(d=>{
     const el = document.getElementById('pengumumanList');
-    const items = (d.items||[]);
+    const items = (d.pengumuman||[]);
     if(items.length === 0){
-      el.innerHTML = '<p class="tbd text-sm">Belum ada pengumuman. Tambahkan lewat halaman /admin.</p>';
-      return;
+      el.innerHTML = '<p class="tbd text-sm">Belum ada pengumuman. Tambahkan lewat form Apps Script / Google Sheet.</p>';
+    } else {
+      el.innerHTML = items.map(it => `
+        <article class="card p-5">
+          <p class="text-xs uppercase tracking-wide text-[var(--soil)] mb-2">${it.tanggal||''}</p>
+          <h3 class="font-display text-lg mb-2">${it.judul||''}</h3>
+          <p class="text-sm text-[var(--ink)]/70">${it.ringkasan||''}</p>
+        </article>`).join('');
     }
-    el.innerHTML = items.map(it => `
-      <article class="card p-5">
-        <p class="text-xs uppercase tracking-wide text-[var(--soil)] mb-2">${it.tanggal||''}</p>
-        <h3 class="font-display text-lg mb-2">${it.judul||''}</h3>
-        <p class="text-sm text-[var(--ink)]/70">${it.ringkasan||''}</p>
-      </article>`).join('');
-  }).catch(()=>{});
+  }).catch(()=>{
+    document.getElementById('pengumumanList').innerHTML = '<p class="tbd text-sm">Gagal memuat data dari Apps Script. Cek URL di config.js.</p>';
+  });
 
 </script>
 </body>
