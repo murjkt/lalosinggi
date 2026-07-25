@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pariwisata — Desa Lalosingi</title>
+<meta name="description" content="Potensi dan destinasi wisata Desa Lalosingi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tbd-banner text-xs md:text-sm px-5 py-2 text-center">
+  ⚠ Teks miring berwarna merah adalah placeholder — WAJIB diganti dengan data resmi dari kantor desa sebelum website dipublikasikan.
+</div>
+
+<header class="sticky top-0 z-50 bg-[var(--forest)] text-[var(--paper)]">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl md:text-2xl tracking-wide">Desa Lalosingi</a>
+    <nav class="hidden md:flex gap-7 text-sm items-center">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="profil.html" class="nav-link">Profil</a>
+      <a href="pemerintahan.html" class="nav-link">Pemerintahan</a>
+      <a href="layanan.html" class="nav-link">Layanan</a>
+      <div class="dropdown">
+        <button class="nav-link active flex items-center gap-1">Data Desa
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown-panel">
+        <a href="demografi.html">Demografi</a>
+        <a href="input.html">Input Data (Staf)</a>
+        <a href="ekonomi.html">Ekonomi & UMKM</a>
+        <a href="pariwisata.html">Pariwisata</a>
+        <a href="pendidikan.html">Pendidikan</a>
+        <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+        <a href="budaya.html">Adat & Budaya</a>
+        <a href="transportasi.html">Transportasi</a>
+        </div>
+      </div>
+      <a href="berita.html" class="nav-link">Berita</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden" aria-label="Buka menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden max-h-0 px-5">
+    <nav class="flex flex-col gap-3 pb-4 text-sm">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="pemerintahan.html">Pemerintahan</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="demografi.html">Demografi</a>
+      <a href="input.html">Input Data (Staf)</a>
+      <a href="ekonomi.html">Ekonomi & UMKM</a>
+      <a href="pariwisata.html" style="color:var(--gold-light)">Pariwisata</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+      <a href="budaya.html">Adat & Budaya</a>
+      <a href="transportasi.html">Transportasi</a>
+      <a href="berita.html">Berita</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="font-display text-2xl md:text-3xl mb-1">Potensi Pariwisata</h2>
+  <div class="grow-line mb-4" style="background:var(--soil)"></div>
+  <p class="text-sm text-[var(--ink)]/70 max-w-2xl mb-10">Destinasi dan daya tarik wisata di Desa Lalosingi.</p>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="card p-6"><h3 class="font-display text-lg mb-2">Nama Destinasi 1</h3><p class="text-sm leading-relaxed"><span class="tbd">Belum diisi — nama, lokasi, dan deskripsi singkat destinasi wisata.</span></p></div>
+    <div class="card p-6"><h3 class="font-display text-lg mb-2">Nama Destinasi 2</h3><p class="text-sm leading-relaxed"><span class="tbd">Belum diisi.</span></p></div>
+    <div class="card p-6"><h3 class="font-display text-lg mb-2">Fasilitas Wisata</h3><p class="text-sm leading-relaxed"><span class="tbd">Belum diisi — parkir, toilet umum, warung, penginapan, dsb bila tersedia.</span></p></div>
+  </div>
+</section>
+
+
+<footer class="bg-[var(--forest)] text-[var(--paper)]/70 text-sm">
+  <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col md:flex-row justify-between gap-3">
+    <p>Pemerintah Desa Lalosingi — Kecamatan Mowila, Kabupaten Konawe Selatan, Sulawesi Tenggara</p>
+    <p>© 2026 Desa Lalosingi. Seluruh informasi dikelola oleh Pemerintah Desa.</p>
+  </div>
+</footer>
+
+<script>
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+    mobileMenu.style.maxHeight = isOpen ? '0px' : mobileMenu.scrollHeight + 'px';
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.style.maxHeight = '0px';
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+
+</script>
+</body>
+</html>

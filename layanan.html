@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layanan Publik — Desa Lalosingi</title>
+<meta name="description" content="Layanan administrasi dan pengaduan warga Desa Lalosingi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tbd-banner text-xs md:text-sm px-5 py-2 text-center">
+  ⚠ Teks miring berwarna merah adalah placeholder — WAJIB diganti dengan data resmi dari kantor desa sebelum website dipublikasikan.
+</div>
+
+<header class="sticky top-0 z-50 bg-[var(--forest)] text-[var(--paper)]">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl md:text-2xl tracking-wide">Desa Lalosingi</a>
+    <nav class="hidden md:flex gap-7 text-sm items-center">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="profil.html" class="nav-link">Profil</a>
+      <a href="pemerintahan.html" class="nav-link">Pemerintahan</a>
+      <a href="layanan.html" class="nav-link active">Layanan</a>
+      <div class="dropdown">
+        <button class="nav-link flex items-center gap-1">Data Desa
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown-panel">
+        <a href="demografi.html">Demografi</a>
+        <a href="input.html">Input Data (Staf)</a>
+        <a href="ekonomi.html">Ekonomi & UMKM</a>
+        <a href="pariwisata.html">Pariwisata</a>
+        <a href="pendidikan.html">Pendidikan</a>
+        <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+        <a href="budaya.html">Adat & Budaya</a>
+        <a href="transportasi.html">Transportasi</a>
+        </div>
+      </div>
+      <a href="berita.html" class="nav-link">Berita</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden" aria-label="Buka menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden max-h-0 px-5">
+    <nav class="flex flex-col gap-3 pb-4 text-sm">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="pemerintahan.html">Pemerintahan</a>
+      <a href="layanan.html" style="color:var(--gold-light)">Layanan</a>
+      <a href="demografi.html">Demografi</a>
+      <a href="input.html">Input Data (Staf)</a>
+      <a href="ekonomi.html">Ekonomi & UMKM</a>
+      <a href="pariwisata.html">Pariwisata</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+      <a href="budaya.html">Adat & Budaya</a>
+      <a href="transportasi.html">Transportasi</a>
+      <a href="berita.html">Berita</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="bg-[var(--forest)] text-[var(--paper)]">
+  <div class="max-w-6xl mx-auto px-5 py-16">
+    <h2 class="font-display text-2xl md:text-3xl mb-1">Layanan Publik</h2>
+    <div class="grow-line mb-10"></div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="font-display text-lg mb-3 text-[var(--gold-light)]">Jam Layanan</h3>
+        <p class="text-sm text-[var(--paper)]/80 leading-relaxed">
+          Senin – Jumat: 08.00 – 15.00 WITA<br>Sabtu &amp; Minggu: Libur<br><br>
+          Kantor Desa Lalosingi<br><span id="alamatKantor">Memuat…</span>
+        </p>
+      </div>
+      <div class="md:col-span-2">
+        <h3 class="font-display text-lg mb-3 text-[var(--gold-light)]">Jenis Surat yang Dapat Diurus</h3>
+        <ol class="grid sm:grid-cols-2 gap-3 text-sm list-decimal list-inside text-[var(--paper)]/90">
+          <li>Surat Keterangan Domisili</li><li>Surat Keterangan Usaha</li>
+          <li>Surat Keterangan Tidak Mampu</li><li>Surat Pengantar KTP/KK</li>
+          <li>Surat Keterangan Kelahiran/Kematian</li><li>Surat Keterangan Belum Menikah</li>
+        </ol>
+        <p class="text-xs text-[var(--paper)]/60 mt-4">Syarat umum: membawa KTP, KK, dan surat pengantar RT/RW setempat.</p>
+      </div>
+    </div>
+    <div class="mt-12 border-t border-[var(--paper)]/15 pt-10">
+      <h3 class="font-display text-lg mb-3 text-[var(--gold-light)]">Pengaduan &amp; Aspirasi Warga</h3>
+      <p class="text-sm text-[var(--paper)]/80 mb-5 max-w-xl">Sampaikan keluhan atau masukan langsung ke Kantor Desa melalui WhatsApp.</p>
+      <form id="pengaduanForm" class="grid sm:grid-cols-2 gap-4 max-w-xl">
+        <input required name="nama" type="text" placeholder="Nama Anda" class="bg-transparent border border-[var(--paper)]/30 px-4 py-3 text-sm placeholder-[var(--paper)]/50 focus:outline-none focus:border-[var(--gold)]">
+        <input required name="dusun" type="text" placeholder="Dusun / RT" class="bg-transparent border border-[var(--paper)]/30 px-4 py-3 text-sm placeholder-[var(--paper)]/50 focus:outline-none focus:border-[var(--gold)]">
+        <textarea required name="pesan" placeholder="Isi pengaduan / masukan" rows="3" class="sm:col-span-2 bg-transparent border border-[var(--paper)]/30 px-4 py-3 text-sm placeholder-[var(--paper)]/50 focus:outline-none focus:border-[var(--gold)]"></textarea>
+        <button type="submit" class="sm:col-span-2 bg-[var(--gold)] text-[var(--forest)] font-semibold px-6 py-3 text-sm hover:bg-[var(--gold-light)] transition w-fit">Kirim via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-[var(--forest)] text-[var(--paper)]/70 text-sm">
+  <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col md:flex-row justify-between gap-3">
+    <p>Pemerintah Desa Lalosingi — Kecamatan Mowila, Kabupaten Konawe Selatan, Sulawesi Tenggara</p>
+    <p>© 2026 Desa Lalosingi. Seluruh informasi dikelola oleh Pemerintah Desa.</p>
+  </div>
+</footer>
+
+<script>
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+    mobileMenu.style.maxHeight = isOpen ? '0px' : mobileMenu.scrollHeight + 'px';
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.style.maxHeight = '0px';
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+
+  let NOMOR_WA_KANTOR_DESA = "";
+  fetch('data/pengaturan.json').then(r=>r.json()).then(d=>{
+    document.getElementById('alamatKantor').textContent = d.alamat_kantor && d.alamat_kantor.trim() ? d.alamat_kantor : 'Alamat belum diisi (isi lewat /admin)';
+    NOMOR_WA_KANTOR_DESA = d.nomor_wa_pengaduan || "";
+  }).catch(()=>{});
+
+  document.getElementById('pengaduanForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!NOMOR_WA_KANTOR_DESA){
+      alert('Nomor WA kantor desa belum diatur. Hubungi admin untuk mengisinya lewat halaman /admin.');
+      return;
+    }
+    const nama = this.nama.value.trim();
+    const dusun = this.dusun.value.trim();
+    const pesan = this.pesan.value.trim();
+    const teks = `Pengaduan/Masukan Warga%0ANama: ${encodeURIComponent(nama)}%0ADusun/RT: ${encodeURIComponent(dusun)}%0AIsi: ${encodeURIComponent(pesan)}`;
+    window.open(`https://wa.me/${NOMOR_WA_KANTOR_DESA}?text=${teks}`, '_blank');
+  });
+
+</script>
+</body>
+</html>

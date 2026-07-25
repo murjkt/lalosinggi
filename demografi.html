@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demografi — Desa Lalosingi</title>
+<meta name="description" content="Data demografi dan statistik kependudukan Desa Lalosingi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tbd-banner text-xs md:text-sm px-5 py-2 text-center">
+  ⚠ Teks miring berwarna merah adalah placeholder — WAJIB diganti dengan data resmi dari kantor desa sebelum website dipublikasikan.
+</div>
+
+<header class="sticky top-0 z-50 bg-[var(--forest)] text-[var(--paper)]">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl md:text-2xl tracking-wide">Desa Lalosingi</a>
+    <nav class="hidden md:flex gap-7 text-sm items-center">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="profil.html" class="nav-link">Profil</a>
+      <a href="pemerintahan.html" class="nav-link">Pemerintahan</a>
+      <a href="layanan.html" class="nav-link">Layanan</a>
+      <div class="dropdown">
+        <button class="nav-link active flex items-center gap-1">Data Desa
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown-panel">
+        <a href="demografi.html">Demografi</a>
+        <a href="input.html">Input Data (Staf)</a>
+        <a href="ekonomi.html">Ekonomi & UMKM</a>
+        <a href="pariwisata.html">Pariwisata</a>
+        <a href="pendidikan.html">Pendidikan</a>
+        <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+        <a href="budaya.html">Adat & Budaya</a>
+        <a href="transportasi.html">Transportasi</a>
+        </div>
+      </div>
+      <a href="berita.html" class="nav-link">Berita</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden" aria-label="Buka menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden max-h-0 px-5">
+    <nav class="flex flex-col gap-3 pb-4 text-sm">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="pemerintahan.html">Pemerintahan</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="demografi.html" style="color:var(--gold-light)">Demografi</a>
+      <a href="input.html">Input Data (Staf)</a>
+      <a href="ekonomi.html">Ekonomi & UMKM</a>
+      <a href="pariwisata.html">Pariwisata</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+      <a href="budaya.html">Adat & Budaya</a>
+      <a href="transportasi.html">Transportasi</a>
+      <a href="berita.html">Berita</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="font-display text-2xl md:text-3xl mb-1">Data Demografi Desa</h2>
+  <div class="grow-line mb-4" style="background:var(--soil)"></div>
+  <p class="text-sm text-[var(--ink)]/70 max-w-2xl mb-10">
+    Data pada halaman ini diambil otomatis dari Google Spreadsheet yang dikelola
+    Kantor Desa. Untuk memperbarui data, cukup edit spreadsheet-nya — halaman ini
+    akan otomatis menampilkan angka terbaru tanpa perlu ubah kode.
+  </p>
+
+  <div id="demografiStatus" class="tbd text-sm mb-8">Memuat data dari spreadsheet…</div>
+  <div id="demografiContent" class="space-y-12"></div>
+
+  <div class="mt-14 card p-6">
+    <h3 class="font-display text-lg mb-2">Form Input Data (Khusus Staf Desa)</h3>
+    <p class="text-sm text-[var(--ink)]/70 mb-4">
+      Untuk mengisi atau menambah data, staf desa mengisi form berikut. Setiap
+      form disubmit, data otomatis masuk ke spreadsheet dan langsung tampil
+      di grafik atas tanpa perlu buka spreadsheet secara manual.
+    </p>
+    <div class="aspect-[4/3] md:aspect-[16/7] w-full border border-black/10 bg-[var(--card)] flex items-center justify-center text-xs text-[var(--ink)]/50 tbd">
+      [Sisipkan embed Google Form di sini — lihat langkah pembuatan di bawah]
+    </div>
+    <p class="text-xs text-[var(--ink)]/45 mt-2">
+      Catatan keamanan: form ini untuk input rekap angka oleh staf desa, bukan
+      untuk warga umum memasukkan data pribadi (NIK, dsb) — hindari mengumpulkan
+      data pribadi warga lewat formulir publik di website.
+    </p>
+  </div>
+
+  <div class="mt-8 card p-6 text-sm leading-relaxed">
+    <h3 class="font-display text-lg mb-3">Cara Membuat Form Input + Menyambungkannya ke Halaman Ini</h3>
+    <ol class="list-decimal list-inside space-y-2 text-[var(--ink)]/80">
+      <li>Buka <strong>Google Forms</strong> (forms.google.com) → buat form baru, judul misalnya "Input Data Demografi Desa Lalosingi".</li>
+      <li>Buat 3 pertanyaan pendek: <strong>Kategori</strong> (contoh pilihan: Jenis Kelamin, Usia, Pekerjaan, Dusun, Pendidikan), <strong>Sub Kategori</strong> (teks bebas), <strong>Jumlah</strong> (jawaban singkat, angka).</li>
+      <li>Klik ikon <strong>Spreadsheet hijau</strong> di tab Responses → "Create Spreadsheet" — Google otomatis membuat Sheet yang terhubung ke form ini.</li>
+      <li>Buka Sheet yang baru dibuat → <strong>File → Share → Publish to web</strong> → format <strong>CSV</strong> → Publish → salin tautannya.</li>
+      <li>Tempel tautan CSV itu ke <code>SHEET_CSV_URL</code> di bagian bawah file <code>demografi.html</code> (sama seperti sebelumnya).</li>
+      <li>Untuk menyematkan form ke halaman ini: di Google Forms klik <strong>Send → ikon embed (&lt;&gt;)</strong> → salin kode <code>&lt;iframe&gt;</code> → tempel menggantikan kotak "[Sisipkan embed Google Form di sini]" di atas.</li>
+    </ol>
+    <p class="text-xs text-[var(--ink)]/50 mt-4">Alur datanya: <strong>Staf isi Form → otomatis masuk Sheet → Sheet ter-publish sebagai CSV → halaman ini otomatis menampilkan grafik terbaru.</strong> Tidak perlu sentuh kode lagi setelah tersambung.</p>
+  </div>
+
+  <div class="mt-8 card p-6 text-sm leading-relaxed">
+    <h3 class="font-display text-lg mb-3">Alternatif: Edit Langsung Lewat Spreadsheet</h3>
+    <p class="text-[var(--ink)]/70 mb-3">Kalau tidak ingin pakai Form, staf desa juga bisa edit datanya langsung di Sheet:</p>
+    <ol class="list-decimal list-inside space-y-2 text-[var(--ink)]/80">
+      <li>Buka Google Sheets, buat spreadsheet baru dengan 3 kolom: <strong>Kategori</strong>, <strong>Sub Kategori</strong>, <strong>Jumlah</strong>.</li>
+      <li>Isi datanya, contoh:
+        <div class="overflow-x-auto mt-2 mb-2">
+        <table class="text-xs border border-black/10 w-full">
+          <tr class="bg-black/5"><td class="border border-black/10 px-2 py-1">Kategori</td><td class="border border-black/10 px-2 py-1">Sub Kategori</td><td class="border border-black/10 px-2 py-1">Jumlah</td></tr>
+          <tr><td class="border border-black/10 px-2 py-1">Jenis Kelamin</td><td class="border border-black/10 px-2 py-1">Laki-laki</td><td class="border border-black/10 px-2 py-1">750</td></tr>
+          <tr><td class="border border-black/10 px-2 py-1">Jenis Kelamin</td><td class="border border-black/10 px-2 py-1">Perempuan</td><td class="border border-black/10 px-2 py-1">730</td></tr>
+          <tr><td class="border border-black/10 px-2 py-1">Usia</td><td class="border border-black/10 px-2 py-1">0–14 tahun</td><td class="border border-black/10 px-2 py-1">400</td></tr>
+          <tr><td class="border border-black/10 px-2 py-1">Pekerjaan</td><td class="border border-black/10 px-2 py-1">Petani</td><td class="border border-black/10 px-2 py-1">500</td></tr>
+          <tr><td class="border border-black/10 px-2 py-1">Dusun</td><td class="border border-black/10 px-2 py-1">Dusun 1</td><td class="border border-black/10 px-2 py-1">300</td></tr>
+        </table>
+        </div>
+      </li>
+      <li>Klik menu <strong>File → Share → Publish to web</strong>.</li>
+      <li>Pilih sheet yang sesuai, format <strong>Comma-separated values (.csv)</strong>, lalu klik <strong>Publish</strong>.</li>
+      <li>Salin tautan (URL) yang muncul.</li>
+      <li>Buka file <code>demografi.html</code>, cari baris <code>SHEET_CSV_URL</code> di bagian bawah, tempel tautan tadi menggantikan tautan contoh.</li>
+      <li>Upload ulang file ke Netlify. Selesai — setiap kali spreadsheet diedit, halaman ini otomatis ikut berubah (refresh browser untuk lihat perubahan terbaru).</li>
+    </ol>
+    <p class="text-xs text-[var(--ink)]/50 mt-4">
+      Catatan: kolom "Kategori" boleh diulang (misalnya beberapa baris "Dusun") — halaman ini
+      otomatis mengelompokkan per Kategori dan membuat grafik batang untuk masing-masing.
+    </p>
+  </div>
+</section>
+
+
+<footer class="bg-[var(--forest)] text-[var(--paper)]/70 text-sm">
+  <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col md:flex-row justify-between gap-3">
+    <p>Pemerintah Desa Lalosingi — Kecamatan Mowila, Kabupaten Konawe Selatan, Sulawesi Tenggara</p>
+    <p>© 2026 Desa Lalosingi. Seluruh informasi dikelola oleh Pemerintah Desa.</p>
+  </div>
+</footer>
+
+<script>
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+    mobileMenu.style.maxHeight = isOpen ? '0px' : mobileMenu.scrollHeight + 'px';
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.style.maxHeight = '0px';
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+
+  // ================== KONFIGURASI DATA DEMOGRAFI ==================
+  // Ganti URL di bawah dengan tautan "Publish to web" (format CSV) dari
+  // Google Sheets milik kantor desa. Lihat panduan di halaman ini.
+  const SHEET_CSV_URL = "GANTI_DENGAN_URL_CSV_GOOGLE_SHEET_ANDA";
+  // ===================================================================
+
+  function parseCSV(text){
+    const lines = text.trim().split(/\r?\n/);
+    const rows = lines.map(line => line.split(',').map(cell => cell.replace(/^"|"$/g,'').trim()));
+    const header = rows.shift();
+    return rows.filter(r => r.length >= 3 && r[0]).map(r => ({
+      kategori: r[0], sub: r[1], jumlah: parseFloat((r[2]||'0').replace(/[^0-9.-]/g,'')) || 0
+    }));
+  }
+
+  function renderDemografi(data){
+    const statusEl = document.getElementById('demografiStatus');
+    const contentEl = document.getElementById('demografiContent');
+    statusEl.style.display = 'none';
+
+    const groups = {};
+    data.forEach(row => {
+      if(!groups[row.kategori]) groups[row.kategori] = [];
+      groups[row.kategori].push(row);
+    });
+
+    let html = '';
+    Object.keys(groups).forEach(kategori => {
+      const items = groups[kategori];
+      const max = Math.max(...items.map(i => i.jumlah), 1);
+      const total = items.reduce((s,i) => s + i.jumlah, 0);
+      html += `<div>
+        <div class="flex items-baseline justify-between mb-4">
+          <h3 class="font-display text-xl">${kategori}</h3>
+          <span class="text-sm text-[var(--ink)]/50">Total: ${total.toLocaleString('id-ID')}</span>
+        </div>
+        <div class="space-y-3">`;
+      items.forEach(item => {
+        const pct = (item.jumlah / max * 100).toFixed(1);
+        html += `<div>
+          <div class="flex justify-between text-sm mb-1"><span>${item.sub}</span><span>${item.jumlah.toLocaleString('id-ID')}</span></div>
+          <div class="bar-track h-3"><div class="bar-fill" style="width:${pct}%"></div></div>
+        </div>`;
+      });
+      html += `</div></div>`;
+    });
+    contentEl.innerHTML = html;
+  }
+
+  function renderDemografiError(){
+    const statusEl = document.getElementById('demografiStatus');
+    statusEl.textContent = 'Data belum tersambung ke spreadsheet. Ikuti panduan di bawah untuk menghubungkan Google Sheets sebagai sumber data.';
+  }
+
+  if(SHEET_CSV_URL.startsWith('http')){
+    fetch(SHEET_CSV_URL)
+      .then(res => { if(!res.ok) throw new Error('fetch failed'); return res.text(); })
+      .then(text => renderDemografi(parseCSV(text)))
+      .catch(() => renderDemografiError());
+  } else {
+    renderDemografiError();
+  }
+
+</script>
+</body>
+</html>

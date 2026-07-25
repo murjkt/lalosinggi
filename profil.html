@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Desa — Desa Lalosingi</title>
+<meta name="description" content="Profil, sejarah, visi misi Desa Lalosingi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tbd-banner text-xs md:text-sm px-5 py-2 text-center">
+  ⚠ Teks miring berwarna merah adalah placeholder — WAJIB diganti dengan data resmi dari kantor desa sebelum website dipublikasikan.
+</div>
+
+<header class="sticky top-0 z-50 bg-[var(--forest)] text-[var(--paper)]">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl md:text-2xl tracking-wide">Desa Lalosingi</a>
+    <nav class="hidden md:flex gap-7 text-sm items-center">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="profil.html" class="nav-link active">Profil</a>
+      <a href="pemerintahan.html" class="nav-link">Pemerintahan</a>
+      <a href="layanan.html" class="nav-link">Layanan</a>
+      <div class="dropdown">
+        <button class="nav-link flex items-center gap-1">Data Desa
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown-panel">
+        <a href="demografi.html">Demografi</a>
+        <a href="input.html">Input Data (Staf)</a>
+        <a href="ekonomi.html">Ekonomi & UMKM</a>
+        <a href="pariwisata.html">Pariwisata</a>
+        <a href="pendidikan.html">Pendidikan</a>
+        <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+        <a href="budaya.html">Adat & Budaya</a>
+        <a href="transportasi.html">Transportasi</a>
+        </div>
+      </div>
+      <a href="berita.html" class="nav-link">Berita</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden" aria-label="Buka menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden max-h-0 px-5">
+    <nav class="flex flex-col gap-3 pb-4 text-sm">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html" style="color:var(--gold-light)">Profil</a>
+      <a href="pemerintahan.html">Pemerintahan</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="demografi.html">Demografi</a>
+      <a href="input.html">Input Data (Staf)</a>
+      <a href="ekonomi.html">Ekonomi & UMKM</a>
+      <a href="pariwisata.html">Pariwisata</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="sarana-prasarana.html">Sarana & Prasarana</a>
+      <a href="budaya.html">Adat & Budaya</a>
+      <a href="transportasi.html">Transportasi</a>
+      <a href="berita.html">Berita</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="font-display text-2xl md:text-3xl mb-1">Profil Desa</h2>
+  <div class="grow-line mb-10"></div>
+  <div class="grid md:grid-cols-2 gap-10">
+    <div>
+      <h3 class="font-display text-xl mb-3">Sejarah</h3>
+      <p class="text-sm leading-relaxed text-[var(--ink)]/80" id="teksSejarah">Memuat…</p>
+    </div>
+    <div>
+      <h3 class="font-display text-xl mb-3">Visi</h3>
+      <p class="text-sm leading-relaxed mb-6" id="teksVisi">Memuat…</p>
+      <h3 class="font-display text-xl mb-3">Misi</h3>
+      <ol class="text-sm leading-relaxed list-decimal list-inside space-y-1" id="listMisi"></ol>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-10 mt-14">
+    <div>
+      <h3 class="font-display text-xl mb-3">Letak Geografis</h3>
+      <ul class="text-sm space-y-1 text-[var(--ink)]/80 mb-4">
+        <li><span class="text-[var(--ink)]/50">Kecamatan</span> — Mowila</li>
+        <li><span class="text-[var(--ink)]/50">Kabupaten</span> — Konawe Selatan</li>
+        <li><span class="text-[var(--ink)]/50">Provinsi</span> — Sulawesi Tenggara</li>
+        <li><span class="text-[var(--ink)]/50">Kode Pos</span> — 93873</li>
+        <li><span class="text-[var(--ink)]/50">Kode Kemendagri</span> — 74.05.15.2009</li>
+        <li><span class="text-[var(--ink)]/50">Koordinat</span> — 4°5′43.37″S 122°12′41.87″E</li>
+      </ul>
+      <p class="text-sm leading-relaxed text-[var(--ink)]/80 mb-4" id="teksBatas"></p>
+      <div class="aspect-video w-full border border-black/10">
+        <iframe src="https://www.google.com/maps?q=-4.09538,122.21163&z=13&output=embed" class="w-full h-full" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Desa Lalosingi"></iframe>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-display text-xl mb-3">Struktur Organisasi Desa</h3>
+      <ul class="text-sm divide-y divide-black/10 border-y border-black/10">
+        <li class="flex justify-between py-2"><span class="text-[var(--ink)]/60">Kepala Desa</span><span id="namaKades"></span></li>
+        <li class="flex justify-between py-2"><span class="text-[var(--ink)]/60">Sekretaris Desa</span><span id="namaSekdes"></span></li>
+      </ul>
+      <p class="text-xs text-[var(--ink)]/45 mt-3">Untuk data kependudukan lengkap, lihat halaman <a href="demografi.html" class="underline">Demografi</a>.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-[var(--forest)] text-[var(--paper)]/70 text-sm">
+  <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col md:flex-row justify-between gap-3">
+    <p>Pemerintah Desa Lalosingi — Kecamatan Mowila, Kabupaten Konawe Selatan, Sulawesi Tenggara</p>
+    <p>© 2026 Desa Lalosingi. Seluruh informasi dikelola oleh Pemerintah Desa.</p>
+  </div>
+</footer>
+
+<script>
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+    mobileMenu.style.maxHeight = isOpen ? '0px' : mobileMenu.scrollHeight + 'px';
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.style.maxHeight = '0px';
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+
+  fetch('data/pengaturan.json').then(r=>r.json()).then(d=>{
+    const t = (val,fallback) => val && val.trim() ? val : fallback;
+    document.getElementById('teksSejarah').textContent = t(d.sejarah, 'Sejarah desa belum diisi. Tambahkan lewat /admin.');
+    document.getElementById('teksVisi').textContent = t(d.visi, 'Visi belum diisi.');
+    document.getElementById('namaKades').textContent = t(d.kepala_desa, 'Belum diisi');
+    document.getElementById('namaSekdes').textContent = t(d.sekretaris_desa, 'Belum diisi');
+    const misi = (d.misi||[]).filter(m => m && m.trim());
+    const misiEl = document.getElementById('listMisi');
+    misiEl.innerHTML = misi.length ? misi.map(m=>`<li>${m}</li>`).join('') : '<li>Misi belum diisi.</li>';
+    const batas = `Batas wilayah Desa Lalosingi: Utara: ${t(d.batas_utara,'belum diisi')} · Selatan: ${t(d.batas_selatan,'belum diisi')} · Timur: ${t(d.batas_timur,'belum diisi')} · Barat: ${t(d.batas_barat,'belum diisi')}`;
+    document.getElementById('teksBatas').textContent = batas;
+  }).catch(()=>{});
+
+</script>
+</body>
+</html>

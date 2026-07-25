@@ -1,0 +1,39 @@
+
+:root{
+  --forest:#16281F; --forest-light:#24402F; --gold:#C9A227; --gold-light:#E4C767;
+  --soil:#6E4A2E; --paper:#EFF2E6; --card:#FBFAF3; --ink:#1C1D16;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'Work Sans', sans-serif;}
+.font-display{font-family:'Fraunces', serif;}
+.terrace-bg{position:absolute; inset:0; overflow:hidden; pointer-events:none;}
+.terrace-bg svg{width:100%; height:100%;}
+.grow-line{height:3px; background:var(--gold); width:0%; animation:growLine 1.4s ease-out forwards; animation-delay:.3s;}
+@keyframes growLine{ to { width:64px; } }
+@media (prefers-reduced-motion: reduce){ .grow-line{ animation:none; width:64px; } }
+.card{background:var(--card); border:1px solid rgba(22,40,31,0.08); border-radius:2px;}
+.nav-link{position:relative; padding-bottom:2px;}
+.nav-link::after{content:""; position:absolute; left:0; bottom:0; width:0%; height:2px; background:var(--gold); transition:width .25s ease;}
+.nav-link:hover::after, .nav-link.active::after{ width:100%; }
+.nav-link.active{ color:var(--gold-light); }
+.stat-num{ font-family:'Fraunces', serif; font-variant-numeric: tabular-nums; }
+.bar-track{ background:rgba(22,40,31,0.08); border-radius:2px; overflow:hidden; }
+.bar-fill{ background:var(--gold); height:100%; }
+a:focus-visible, button:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
+#mobileMenu{ transition:max-height .3s ease; overflow:hidden; }
+.tbd{ color:#C0392B; font-style:italic; }
+.tbd-banner{ background:#FDEDEC; color:#C0392B; border:1px solid #C0392B; }
+.dropdown{ position:relative; }
+.dropdown-panel{
+  position:absolute; top:100%; left:0; margin-top:.5rem; min-width:220px;
+  background:var(--forest-light); border:1px solid rgba(255,255,255,0.1);
+  opacity:0; visibility:hidden; transform:translateY(4px);
+  transition:opacity .15s ease, transform .15s ease, visibility .15s;
+  z-index:60;
+}
+.dropdown:hover .dropdown-panel, .dropdown:focus-within .dropdown-panel{
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+.dropdown-panel a{ display:block; padding:.6rem 1rem; font-size:.875rem; }
+.dropdown-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--gold-light); }

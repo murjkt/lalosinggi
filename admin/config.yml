@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pengaturan"
+    label: "Data Umum Desa"
+    files:
+      - file: "data/pengaturan.json"
+        label: "Data Umum Desa"
+        name: "pengaturan"
+        fields:
+          - { label: "Nama Kepala Desa", name: "kepala_desa", widget: "string", required: false }
+          - { label: "Nama Sekretaris Desa", name: "sekretaris_desa", widget: "string", required: false }
+          - { label: "Alamat Kantor Desa", name: "alamat_kantor", widget: "text", required: false }
+          - { label: "Telepon / WhatsApp Kantor", name: "telepon", widget: "string", required: false }
+          - { label: "Email Kantor Desa", name: "email", widget: "string", required: false }
+          - { label: "Nomor WA untuk Form Pengaduan (format 62xxxx)", name: "nomor_wa_pengaduan", widget: "string", required: false }
+          - { label: "Jumlah Penduduk (jiwa)", name: "jumlah_penduduk", widget: "string", required: false }
+          - { label: "Luas Wilayah (km2)", name: "luas_wilayah", widget: "string", required: false }
+          - { label: "Jumlah Dusun", name: "jumlah_dusun", widget: "string", required: false }
+          - { label: "Jumlah KK", name: "jumlah_kk", widget: "string", required: false }
+          - { label: "Batas Utara", name: "batas_utara", widget: "string", required: false }
+          - { label: "Batas Selatan", name: "batas_selatan", widget: "string", required: false }
+          - { label: "Batas Timur", name: "batas_timur", widget: "string", required: false }
+          - { label: "Batas Barat", name: "batas_barat", widget: "string", required: false }
+          - { label: "Sejarah Desa", name: "sejarah", widget: "text", required: false }
+          - { label: "Visi", name: "visi", widget: "text", required: false }
+          - { label: "Misi (list)", name: "misi", widget: "list", required: false }
+          - { label: "Instagram (URL)", name: "instagram", widget: "string", required: false }
+          - { label: "Facebook (URL)", name: "facebook", widget: "string", required: false }
+
+  - name: "pengumuman"
+    label: "Pengumuman"
+    files:
+      - file: "data/pengumuman.json"
+        label: "Daftar Pengumuman"
+        name: "pengumuman"
+        fields:
+          - label: "Daftar Pengumuman"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Judul", name: "judul", widget: "string" }
+              - { label: "Tanggal", name: "tanggal", widget: "string", hint: "Contoh: 12 Agustus 2026" }
+              - { label: "Ringkasan", name: "ringkasan", widget: "text" }
+
+  - name: "berita"
+    label: "Berita & Kegiatan"
+    files:
+      - file: "data/berita.json"
+        label: "Daftar Berita"
+        name: "berita"
+        fields:
+          - label: "Daftar Berita"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Judul", name: "judul", widget: "string" }
+              - { label: "Tanggal", name: "tanggal", widget: "string", hint: "Contoh: 12 Agustus 2026" }
+              - { label: "Kategori", name: "kategori", widget: "string", hint: "Contoh: Pembangunan, Kegiatan, Pengumuman" }
+              - { label: "Ringkasan", name: "ringkasan", widget: "text" }
+              - { label: "Foto", name: "foto", widget: "image", required: false }
