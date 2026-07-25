@@ -3,7 +3,7 @@ backend:
   name: git-gateway
   repo: murjkt/lalosinggi
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/e2df8c2a-833a-4614-8c9f-0994ac17784b
+  identity_url: https://auth.decapbridge.com/sites/756af184-cfbe-46e2-8420-280686ff008d
   gateway_url: https://gateway.decapbridge.com
   # See who did what (optional)
   commit_messages:
@@ -16,7 +16,7 @@ backend:
 # Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in Decap CMS (optional)
-site_url: https://ephemeral-pasca-4b3c5b.netlify.app
+site_url: https://desa-lalosinggi.netlify.app
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
