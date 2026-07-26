@@ -72,17 +72,19 @@
 </header>
 
 
-<section class="relative bg-[var(--forest)] text-[var(--paper)] overflow-hidden">
-  <div class="terrace-bg" aria-hidden="true">
-    <svg viewBox="0 0 1200 500" preserveAspectRatio="none">
-      <path d="M0,500 L0,380 Q300,320 600,360 T1200,340 L1200,500 Z" fill="var(--forest-light)" opacity="0.55"/>
-      <path d="M0,500 L0,430 Q300,390 650,420 T1200,400 L1200,500 Z" fill="var(--forest-light)" opacity="0.35"/>
-      <path d="M0,500 L0,470 Q350,450 700,468 T1200,460 L1200,500 Z" fill="var(--gold)" opacity="0.18"/>
-    </svg>
+<section class="relative bg-[var(--forest)] text-[var(--paper)] overflow-hidden min-h-[560px] flex items-end">
+  <div class="absolute inset-0" aria-hidden="true">
+    <iframe
+      src="https://www.google.com/maps?q=-4.09538,122.21163&z=12&output=embed"
+      class="w-full h-full opacity-40 grayscale contrast-125"
+      style="border:0; pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+    <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(22,40,31,0.55) 0%, rgba(22,40,31,0.75) 45%, rgba(22,40,31,0.97) 100%);"></div>
   </div>
-  <div class="relative max-w-6xl mx-auto px-5 pt-16 pb-20 md:pt-24 md:pb-28">
-    <p class="uppercase tracking-[0.2em] text-xs text-[var(--gold-light)] mb-4">Kecamatan Mowila · Kabupaten Konawe Selatan · Sulawesi Tenggara</p>
-    <h1 class="font-display text-4xl md:text-6xl leading-tight max-w-2xl">Website Resmi<br>Desa Lalosingi</h1>
+
+  <div class="relative max-w-6xl mx-auto px-5 pt-24 pb-16 md:pt-32 md:pb-20 w-full">
+    <p class="uppercase tracking-[0.3em] text-xs text-[var(--gold-light)] mb-3 font-semibold">Website Resmi</p>
+    <h1 class="font-display text-5xl md:text-7xl leading-[1.05]">Desa Lalosingi</h1>
+    <p class="uppercase tracking-[0.2em] text-xs text-[var(--paper)]/70 mt-4">Kecamatan Mowila · Kabupaten Konawe Selatan · Sulawesi Tenggara</p>
     <div class="grow-line mt-6 mb-6"></div>
     <p class="max-w-xl text-[var(--paper)]/85 leading-relaxed">Kanal informasi resmi Pemerintah Desa Lalosingi — transparansi anggaran, layanan administrasi, dan potensi desa.</p>
     <div class="mt-8 flex flex-wrap gap-4">
@@ -90,7 +92,8 @@
       <a href="pemerintahan.html" class="border border-[var(--paper)]/40 px-6 py-3 text-sm hover:border-[var(--gold)] hover:text-[var(--gold-light)] transition">Transparansi APBDes</a>
     </div>
   </div>
-  <div class="relative border-t border-[var(--paper)]/10 bg-[var(--forest-light)]/40">
+
+  <div class="relative border-t border-[var(--paper)]/10 bg-[var(--forest-light)]/60 w-full backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-5 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left" id="statGrid">
       <div><div class="stat-num text-2xl md:text-3xl text-[var(--gold-light)]" id="statPenduduk">—</div><div class="text-xs uppercase tracking-wide text-[var(--paper)]/70 mt-1">Jiwa Penduduk</div></div>
       <div><div class="stat-num text-2xl md:text-3xl text-[var(--gold-light)]" id="statLuas">—</div><div class="text-xs uppercase tracking-wide text-[var(--paper)]/70 mt-1">Km² Luas Wilayah</div></div>
